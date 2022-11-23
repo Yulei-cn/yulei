@@ -1,4 +1,17 @@
 '''
+x=int(input("Entrez un nombre N : "))
+i = 0
+while i < x:
+    print(i)
+    i += 1
+print("la somme des N entiers naturels %d" %i)
+
+n=100
+while True:
+    x=int(input("Entrez un nombre N : "))
+    if x == n:
+        break
+
 li=[1,5,6,10,11,14,15,16,18,20]
 i=0
 n1=0
