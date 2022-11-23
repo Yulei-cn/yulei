@@ -1,10 +1,12 @@
 '''
 x=int(input("Entrez un nombre N : "))
 i = 0
+n = 0
 while i < x:
     print(i)
     i += 1
-print("la somme des N entiers naturels %d" %i)
+    n=i+i
+print("la somme des N entiers naturels %d" %n)
 
 n=100
 while True:
@@ -12,8 +14,16 @@ while True:
     if x == n:
         break
 
-li=[1,5,6,10,11,14,15,16,18,20]
 i=0
+li=[]
+while i < 10:
+    i += 1
+    a=int(input("10 valeur:"))
+    if a > 0 and a <20:
+       li.append(a)
+    else:
+        print("entre 0 et 20")
+        i -= 1
 n1=0
 n2=0
 n3=0
@@ -55,7 +65,6 @@ while True:
         else:
             print("egal")
             break
-'''
 
 def func(n):
     res=n
@@ -68,6 +77,6 @@ x=int(input("donnez la valeur:"))
 
 print(func(x))
 
-
+'''
 
 
