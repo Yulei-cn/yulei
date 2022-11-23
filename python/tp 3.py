@@ -1,3 +1,4 @@
+'''
 li=[1,5,6,10,11,14,15,16,18,20]
 i=0
 n1=0
@@ -14,3 +15,46 @@ for i in li:
 print("Le nombre de valeurs inférieur strictement à ",n1,
     "\nLe nombre de valeurs supérieur ou égale à 10 et inférieur strictement à 15",n2,
     "\ni<=15",n3)
+    
+x=int(input("donne la valeur:"))
+i=0
+n=0
+a=0
+while i < x:
+    i += 1
+    a=i-2
+    n=i+i
+    if n > x:
+        print("alors le nombre N recherché est",a)
+        break
+
+
+import random
+n=random.randint(1,100)
+print(n)
+while True:
+    x=int(input("donne la valeur:"))
+    if x<n:
+        print("petit")
+    else:
+        if x>n:
+            print("grand")
+        else:
+            print("egal")
+            break
+'''
+
+def func(n):
+    res=n
+    for i in range(1,n):
+        res *= i
+    return res
+
+
+x=int(input("donnez la valeur:"))
+
+print(func(x))
+
+
+
+
