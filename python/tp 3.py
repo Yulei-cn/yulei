@@ -79,4 +79,33 @@ print(func(x))
 
 '''
 
+while True:
+    heured=int(input("les heures de début:"))
+    if 0 < heured <= 24:
+        break
+    else:
+        print("les heures de début est incoun")
+while True:
+    heuref=int(input("les heures de fin:"))
+    if 0 < heuref <= 24 and heured <= heuref:
+        break
+    else:
+        print("les heures de fin est incoun")
 
+print("\nles heures de début est",heured,"\nles heures de fin est",heuref)
+T=0
+t=0
+prix1=0
+prix2=0
+prix3=0
+prix=prix1+prix2+prix3
+heure=heuref-heured
+print("il y a %d heure" %heure)
+if 0 < heured < 7 or 17 < heured < 24 :
+    prix1=heure*1
+    if 7 < heuref < 17: 
+        prix2=prix1+((heuref)-7)*2
+elif(7 < heured < 17):
+    prix1=heure*2
+
+print(prix)
