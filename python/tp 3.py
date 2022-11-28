@@ -81,7 +81,7 @@ print(func(x))
 
 while True:
     heured=int(input("les heures de début:"))
-    if 0 < heured <= 24:
+    if 0 <= heured <= 24:
         break
     else:
         print("les heures de début est incoun")
@@ -91,21 +91,33 @@ while True:
         break
     else:
         print("les heures de fin est incoun")
-
-print("\nles heures de début est",heured,"\nles heures de fin est",heuref)
 T=0
 t=0
 prix1=0
 prix2=0
-prix3=0
-prix=prix1+prix2+prix3
-heure=heuref-heured
-print("il y a %d heure" %heure)
-if 0 < heured < 7 or 17 < heured < 24 :
-    prix1=heure*1
-    if 7 < heuref < 17: 
-        prix2=prix1+((heuref)-7)*2
-elif(7 < heured < 17):
-    prix1=heure*2
+prix=prix1+prix2
+if 7 < heured < 17 and 7 < heuref < 17:
+    T= heuref - heured
+    prix1 = T * 2
+else:
+    if 0 <= heured < 7 and 0 < heuref <= 7 or 17 <= heured < 24 and 17 < heuref <= 24:
+        t = heuref-heured
+        prix2= t * 1
+    else:
+        t = heuref-17
+        T = 17-heured
+        prix1 = T * 2
+        prix2= t * 1
 
-print(prix)
+if t > 0:
+    print("\n %d heure(s) au tarif horaire de 1.0 euro(s)" %(t))
+else:
+    pass
+if T > 0:
+    print("\n %d heure(s) au tarif horaire de 2.0 euro(s)" %(T))
+else:
+    pass
+
+
+prix=prix1+prix2
+print("Le montant total à payer est de %d euro(s)"%prix)
