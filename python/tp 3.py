@@ -98,34 +98,41 @@ prix1=0
 prix2=0
 if heured==heuref:
     T=t=1
+    heuref=1+heured
+    print("les heures de fin:",heuref)
     if 7<=heured<=17:
         prix1=2
     else:
         prix2=1
-elif 7 < heured < 17 and 7 < heuref < 17:
-    T= heuref - heured
-    prix1 = T * 2
 else:
-    if 0 <= heured < 7 and 0 < heuref <= 7 or 17 <= heured < 24 and 17 < heuref <= 24:
-        t = heuref-heured
-        prix2= t * 1
+    if 7 <= heured < 17 and 7 < heuref <= 17:
+        T= heuref - heured
+        prix2 = T * 2
     else:
-        t = heuref-17
-        T = 17-heured
-        prix1 = T * 2
-        prix2= t * 1
-
+        if 0 <= heured < 7 and 0 < heuref <= 7 or 17 <= heured < 24 and 17 < heuref <= 24:
+            t = heuref-heured
+            prix1= t * 1
+            if  7<=heured<=17 and 17<=heuref<=24:
+                t = 17-heuref
+                T = heured-7
+                prix2 = T * 2
+                prix1 = t * 1
+            else:
+                t = 7 + 7 - heured
+                T = 7
+                prix2 = T * 2
+                prix1 = t * 1
 
 prix=prix1+prix2
 
 
 
-if prix2 > 0:
-    print("\n %d heure(s) au tarif horaire de 1.0 euro(s)" %(t))
+if prix1 > 0:
+    print("%d heure(s) au tarif horaire de 1.0 euro(s)" %(t))
 else:
     pass
-if prix1 > 0:
-    print("\n %d heure(s) au tarif horaire de 2.0 euro(s)" %(T))
+if prix2 > 0:
+    print("%d heure(s) au tarif horaire de 2.0 euro(s)" %(T))
 else:
     pass
 
