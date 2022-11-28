@@ -91,12 +91,18 @@ while True:
         break
     else:
         print("les heures de fin est incoun")
+
 T=0
 t=0
 prix1=0
 prix2=0
-prix=prix1+prix2
-if 7 < heured < 17 and 7 < heuref < 17:
+if heured==heuref:
+    T=t=1
+    if 7<=heured<=17:
+        prix1=2
+    else:
+        prix2=1
+elif 7 < heured < 17 and 7 < heuref < 17:
     T= heuref - heured
     prix1 = T * 2
 else:
@@ -109,15 +115,20 @@ else:
         prix1 = T * 2
         prix2= t * 1
 
-if t > 0:
+
+prix=prix1+prix2
+
+
+
+if prix2 > 0:
     print("\n %d heure(s) au tarif horaire de 1.0 euro(s)" %(t))
 else:
     pass
-if T > 0:
+if prix1 > 0:
     print("\n %d heure(s) au tarif horaire de 2.0 euro(s)" %(T))
 else:
     pass
 
 
-prix=prix1+prix2
+
 print("Le montant total à payer est de %d euro(s)"%prix)
