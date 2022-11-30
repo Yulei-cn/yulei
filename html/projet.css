@@ -92,6 +92,7 @@
     font-size: 5px;
     line-height: 2;
 	z-index:99;
+	width: 80%;
 }
 
 p.line {
@@ -100,8 +101,15 @@ p.line {
     margin: 0 25px;
     position: relative;
     top: -5%;
-    width: 53%;
+    width: 80%;
 }
 
+img.info-photo {
+	  margin-left:840px;
+	  margin-top:160px;
+	  position:absolute;
+	  z-index:6;
+  }
+  
 
 
