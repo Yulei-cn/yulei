@@ -55,6 +55,7 @@
 }
 
 footer{
+	padding-left: 5%;
     display: flex;
     justify-content: space-around;
 }

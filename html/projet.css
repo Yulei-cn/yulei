@@ -63,7 +63,7 @@
 	position: relative;
     display: flex;
     justify-content: center;
-    height: 400px;
+    height: 300px;
 }
 
 .info-content {
@@ -92,7 +92,7 @@
     font-size: 5px;
     line-height: 2;
 	z-index:99;
-	width: 80%;
+	width: 1200px;
 }
 
 p.line {
@@ -104,12 +104,6 @@ p.line {
     width: 80%;
 }
 
-img.info-photo {
-	  margin-left:840px;
-	  margin-top:160px;
-	  position:absolute;
-	  z-index:6;
-  }
   
 
 
